@@ -25,7 +25,7 @@ class Basic_Judgment(object):
 
     def message_select(self, message_dict: dict, manage_dict: dict) -> dict:
 
-        if message_dict["user_id"] in manage_dict["private"]:
+        if message_dict["message_type"] == "private" or message_dict["user_id"] in manage_dict["private"]:
             message_send = self.private_message(message_dict)
             if message_send:
                 return message_send

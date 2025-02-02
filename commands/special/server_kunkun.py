@@ -1,6 +1,6 @@
 
-from function.message_sendformat import Message_SendFormat, Parameter_Judgment
-from function.database import OnebotDatabase
+from commands.method.message_sendformat import Message_SendFormat, Parameter_Judgment
+from commands.method.database import OnebotDatabase
 import random
 import sqlite3
 
@@ -14,7 +14,7 @@ class KunKun_Game(object):
         user_list = Parameter_Judgment().parameter_judgment(message_dict)
         message = Message_SendFormat(user_list[0], user_list[1], user_list[2])
 
-        user_id_list, con, cur, member_object = self.member_database("database")
+        user_id_list, con, cur, member_object = self.member_database("database/data")
         
         if "创建牛至" in message_text:
             return self.func1(message_dict, message, user_id_list, con, cur, member_object)

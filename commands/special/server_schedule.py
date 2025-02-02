@@ -1,5 +1,5 @@
-from function.message_sendformat import Message_SendFormat, Parameter_Judgment
-from function.database import OnebotDatabase
+from commands.method.message_sendformat import Message_SendFormat, Parameter_Judgment
+from commands.method.database import OnebotDatabase
 import sqlite3
 
 class Schedule(object):
@@ -12,7 +12,7 @@ class Schedule(object):
         
     def send(self):
         
-        con, cur, schedule_object = self.schedule_database("database")
+        con, cur, schedule_object = self.schedule_database("database/data")
         
         if self.command == "add":
             message_text = self.schedule_add(con, cur)
@@ -38,7 +38,6 @@ class Schedule(object):
     
     # 添加计划
     def schedule_add(self, con: sqlite3.Connection, cur: sqlite3.Cursor) -> str:
-        print("qww")
         cur.execute("INSERT INTO {} (添加者, 添加时间, 完成者, 完成时间, 删除者, 删除时间, 当前状态, 计划内容) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
                     .format(self.table_name), 
                     (self.message_dict['user_id'], self.message_dict['time'], 0, 0, 0, 0, 0, self.schedule_text))

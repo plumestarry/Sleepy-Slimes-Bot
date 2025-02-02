@@ -1,6 +1,6 @@
 
 import psutil
-from function.message_sendformat import Message_SendFormat, Parameter_Judgment
+from commands.method.message_sendformat import Message_SendFormat, Parameter_Judgment
 
 def server_data(message_dict, message_text):
     

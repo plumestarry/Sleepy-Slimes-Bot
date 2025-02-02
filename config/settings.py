@@ -9,6 +9,7 @@ class PathConfig:
     LOGS_DIR = DATABASE_DIR / "logs"
     TEMP_JSON = DATABASE_DIR / "received_messages.json"
     CONFIG_JSON = DATABASE_DIR / "config.json"
+    HELP_JSON = DATABASE_DIR / "help.json"
 
 @dataclass
 class LogConfig:
@@ -23,3 +24,11 @@ class PerfParams:
     QUEUE_SIZE = 1000
     BATCH_SIZE = 100
     FLUSH_INTERVAL = 60
+
+@dataclass
+class PokeConfig:
+    POKE_COUNT = 0
+
+@dataclass
+class WebSocketsConfig:
+    SOCKET = None

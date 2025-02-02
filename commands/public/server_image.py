@@ -1,6 +1,7 @@
-from function.message_sendformat import Message_SendFormat, Parameter_Judgment
+from commands.method.message_sendformat import Message_SendFormat, Parameter_Judgment
 import random
 import requests
+import logging
 
 def random_image(message_dict):
     
@@ -36,7 +37,6 @@ def key_image(message_dict, tag):
             
                 
     except Exception as e:
-        with open("TackBack.txt", "a", encoding="utf-8") as file:
-            file.write(str(e) + "调用p站方法失败" + "\n")
+        logging.error(e + "p站图片请求失败")
             
     return message.normal_message("请求失败")

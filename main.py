@@ -29,7 +29,7 @@ async def main():
     try:
         await asyncio.Future()
     except asyncio.CancelledError:
-        pass
+        await shutdown(server, scheduler)
 
 async def shutdown(server: WebSocketServer, scheduler: Scheduler):
     """优雅关闭系统"""
@@ -53,12 +53,8 @@ if __name__ == "__main__":
     # Windows事件循环策略设置
     if platform.system() == 'Windows':
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    loop = asyncio.get_event_loop()
     try:
-        server = WebSocketServer(DataProcessor(file_manager.FileManager()))
-        scheduler = Scheduler(file_manager.FileManager())
-        loop.run_until_complete(main())
+        asyncio.run(main())
     except KeyboardInterrupt:
-        loop.run_until_complete(shutdown(server, scheduler))
-    finally:
-        loop.close()
+        logging.info("KeyboardInterrupt")
+        

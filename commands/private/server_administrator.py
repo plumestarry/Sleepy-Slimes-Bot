@@ -1,6 +1,6 @@
 
-from function.message_sendformat import Message_SendFormat, Parameter_Judgment
-from function.database import OnebotDatabase
+from commands.method.message_sendformat import Message_SendFormat, Parameter_Judgment
+from commands.method.database import OnebotDatabase
 import sqlite3
 
 class Admin(object):
@@ -12,7 +12,7 @@ class Admin(object):
         
     def send(self):
         
-        con, cur, admin_object = self.admin_database("database")
+        con, cur, admin_object = self.admin_database("database/data")
         
         if self.command == "group_add":
             message_text = self.group_add(con, cur)

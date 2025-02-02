@@ -1,6 +1,6 @@
 {
     "websocket": {
-        "port": 6700,
+        "port": 5140,
         "route": "/onebot"
     },
     "clear_time": {

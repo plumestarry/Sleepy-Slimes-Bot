@@ -1,5 +1,5 @@
-from function.message_sendformat import Message_SendFormat, Parameter_Judgment
-from function.database import OnebotDatabase
+from commands.method.message_sendformat import Message_SendFormat, Parameter_Judgment
+from commands.method.database import OnebotDatabase
 import sqlite3
 
 class ServerSQL(object):
@@ -10,11 +10,12 @@ class ServerSQL(object):
         self.sql_file = message_list[1]
         self.sql_text = ""
         for i in range(2, len(message_list)):
-            self.sql_text += message_list[i]
+            self.sql_text += message_list[i] + ":"
+        self.sql_text = self.sql_text[:-1]
         
     def send(self):
         
-        con, cur, sql_object = self.sql_database("database")
+        con, cur, sql_object = self.sql_database("database/data")
         
         if self.command == "SQL_create":
             message_text = self.sql_command(con, cur)

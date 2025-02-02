@@ -15,7 +15,7 @@ class DataProcessor:
     async def process(self, raw_data: str, websocket: websockets.ServerConnection, manage_dict: dict[str, list[int]]):
         """处理原始消息数据"""
         try:
-            if raw_data[-22:-1] != '"post_type":"message"' or raw_data[-21:-1] != '"post_type":"notice"':
+            if raw_data[-22:-1] != '"post_type":"message"' and raw_data[-21:-1] != '"post_type":"notice"':
                 return
             data = json.loads(raw_data)
             self._validate(data)

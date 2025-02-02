@@ -74,7 +74,7 @@ class Distribution(object):
                 if message_content["data"]["text"][:3] == "SQL":
                     return ServerSQL(message_dict, message_content["data"]["text"].split(":")).send()
                 
-                # (group_add/group_delete/user_add/user_delete) (group_id)
+                # (Admin) (group_add/group_delete/user_add/user_delete) (group_id)
                 if message_content["data"]["text"][:5] == "Admin":
                     return Admin(message_dict, message_content["data"]["text"].split(" ")).send()
                 

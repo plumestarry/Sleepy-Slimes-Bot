@@ -5,13 +5,13 @@ from config.settings import LogConfig, PathConfig
 
 def setup_logger():
     """配置全局日志记录器"""
-    PathConfig.LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    # PathConfig.LOGS_DIR.mkdir(parents=True, exist_ok=True)
     
     formatter = logging.Formatter(LogConfig.FORMAT)
     
     # 文件处理器（带日志轮转）
     file_handler = TimedRotatingFileHandler(
-        filename=PathConfig.LOGS_DIR / "bot.log",
+        filename=PathConfig.LOGS_DIR + "bot.log",
         when='midnight',
         backupCount=LogConfig.RETENTION,
         encoding='utf-8'

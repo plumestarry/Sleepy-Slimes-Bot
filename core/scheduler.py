@@ -2,7 +2,7 @@
 from commands.method.message_sendformat import Message_SendFormat, Parameter_Judgment
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from commands.whitelist import WhiteList
-from config import settings
+from config.settings import PathConfig, WebSocketsConfig
 import logging
 import json
 
@@ -33,7 +33,7 @@ class Scheduler:
 
     def _load_clear_time(self):
         """加载清理时间配置"""
-        with open(settings.PathConfig.CONFIG_JSON) as f:
+        with open(PathConfig.CONFIG_JSON) as f:
             return json.load(f)['clear_time']
         
     async def _group_list(self):
@@ -41,5 +41,5 @@ class Scheduler:
         message_send_init = Message_SendFormat("send_group_msg", "group_id", 0).normal_message("让我看看还有哪个小可爱没睡觉喵~没睡觉的小心晚上被我抓到喵~呵呵呵哈哈哈~🤤🤤🤤")
         for group_id in self.group_list:
             message_send_init["params"]["group_id"] = group_id
-            await settings.WebSocketsConfig.SOCKET.send(json.dumps(message_send_init))
+            await WebSocketsConfig.SOCKET.send(json.dumps(message_send_init))
             

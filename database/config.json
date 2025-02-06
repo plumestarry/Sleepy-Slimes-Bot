@@ -6,5 +6,9 @@
     "clear_time": {
         "hour": 2,
         "minute": 30
+    },
+    "deepseek": {
+        "key": "<DeepSeek API Key>",
+        "url":"https://api.deepseek.com"
     }
 }

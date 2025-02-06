@@ -20,7 +20,7 @@ class WebSocketServer:
         self.active_connections.add(websocket)
         try:
             settings.WebSocketsConfig.SOCKET = websocket
-            await self._group_list()
+            await self._group_list(websocket)
             async for message in websocket:
                 asyncio.create_task(self.message_callback(message, websocket, WhiteList.special_manage()))
         except websockets.ConnectionClosed:
@@ -41,11 +41,14 @@ class WebSocketServer:
     def _load_config(self):
         """加载配置文件"""
         with open(settings.PathConfig.CONFIG_JSON) as f:
-            return json.load(f)['websocket']
+            temp = json.load(f)
+            settings.DeepSeekConfig.API_KEY = temp['deepseek']['key']
+            settings.DeepSeekConfig.API_URL = temp['deepseek']['url']
+            return temp['websocket']
     
-    async def _group_list(self):
+    async def _group_list(self, websocket: websockets.ServerConnection):
         """发送群组消息"""
         message_send_init = Message_SendFormat("send_group_msg", "group_id", 0).normal_message("Onebot_Mod Ver-0.6 Launch success!")
         for group_id in WhiteList.special_manage()["special"]:
             message_send_init["params"]["group_id"] = group_id
-            await settings.WebSocketsConfig.SOCKET.send(json.dumps(message_send_init))
+            await websocket.send(json.dumps(message_send_init))

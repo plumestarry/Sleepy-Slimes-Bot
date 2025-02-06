@@ -1,6 +1,7 @@
 # config/settings.py
 from pathlib import Path
 from dataclasses import dataclass
+import json
 
 @dataclass
 class PathConfig: 
@@ -33,3 +34,9 @@ class PokeConfig:
 @dataclass
 class WebSocketsConfig:
     SOCKET = None
+    
+@dataclass
+class DeepSeekConfig:
+    API_KEY = "<DeepSeek API Key>"
+    API_URL = "https://api.deepseek.com"
+    MESSAGES = []

@@ -10,7 +10,7 @@ from commands.special.server_schedule import Schedule
 from commands.public.server_help import server_at, server_help
 from commands.public.server_image import random_image, key_image
 from commands.public.server_recall import server_recall
-
+from commands.public.server_deepseek import DeepSeekServer
 
 
 class Distribution(object):
@@ -124,6 +124,8 @@ class Distribution(object):
                     return key_image(message_dict, message_content["data"]["text"])
                 if message_content["data"]["text"] == "随机二次元":
                     return random_image(message_dict)
+                if message_content["data"]["text"][:2] == "ds":
+                    return DeepSeekServer(message_dict, message_content["data"]["text"].split(" ")).send()
                 if message_content["data"]["text"].strip(" ") == "消息撤回":
                     return server_recall(message_dict)
         
@@ -136,7 +138,7 @@ class Distribution(object):
         
         if message_dict["notice_type"] == "group_increase":
             return server_increase(message_dict)
-        if message_dict["sub_type"] == "poke":
+        if message_dict["sub_type"] == "group_poke":
             return server_poke(message_dict)
         
         return None

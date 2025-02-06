@@ -2,6 +2,7 @@
 import json
 import logging
 import websockets
+from config.settings import WebSocketsConfig
 from collections import deque
 from utils.file_manager import FileManager
 from commands.message_distribution import Distribution
@@ -17,6 +18,7 @@ class DataProcessor:
         try:
             if raw_data[-22:-1] != '"post_type":"message"' and raw_data[-21:-1] != '"post_type":"notice"':
                 return
+            WebSocketsConfig.SOCKET = websocket
             data = json.loads(raw_data)
             self._validate(data)
             self.message_queue.append(data)

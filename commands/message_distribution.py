@@ -138,7 +138,7 @@ class Distribution(object):
         
         if message_dict["notice_type"] == "group_increase":
             return server_increase(message_dict)
-        if message_dict["sub_type"] == "group_poke":
+        if "sub_type" in message_dict and message_dict["sub_type"] == "poke":
             return server_poke(message_dict)
         
         return None

@@ -1,0 +1,152 @@
+2025-02-06 23:08:15,271 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:08:15,288 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:08:15,289 - INFO - Scheduler started
+2025-02-06 23:08:15,289 - INFO - 定时任务已启动
+2025-02-06 23:08:15,295 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:08:15,296 - INFO - server listening on [::1]:5140
+2025-02-06 23:08:15,296 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:08:31,538 - INFO - connection open
+2025-02-06 23:09:07,307 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:09:07,308 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:09:07,323 - INFO - Scheduler started
+2025-02-06 23:09:07,323 - INFO - 定时任务已启动
+2025-02-06 23:09:07,331 - INFO - server listening on [::1]:5140
+2025-02-06 23:09:07,331 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:09:07,332 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:09:17,594 - INFO - connection open
+2025-02-06 23:12:49,330 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:12:49,330 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:12:49,330 - INFO - Scheduler started
+2025-02-06 23:12:49,330 - INFO - 定时任务已启动
+2025-02-06 23:12:49,339 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:12:49,339 - INFO - server listening on [::1]:5140
+2025-02-06 23:12:49,339 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:12:51,755 - INFO - connection open
+2025-02-06 23:14:42,816 - INFO - connection open
+2025-02-06 23:17:13,875 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:17:13,875 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:17:13,875 - INFO - Scheduler started
+2025-02-06 23:17:13,875 - INFO - 定时任务已启动
+2025-02-06 23:17:13,875 - INFO - server listening on [::1]:5140
+2025-02-06 23:17:13,875 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:17:13,875 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:17:17,138 - INFO - connection open
+2025-02-06 23:18:46,872 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:18:46,874 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:18:46,875 - INFO - Scheduler started
+2025-02-06 23:18:46,875 - INFO - 定时任务已启动
+2025-02-06 23:18:46,881 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:18:46,882 - INFO - server listening on [::1]:5140
+2025-02-06 23:18:46,882 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:18:50,274 - INFO - connection open
+2025-02-06 23:21:18,073 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:21:18,075 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:21:18,075 - INFO - Scheduler started
+2025-02-06 23:21:18,075 - INFO - 定时任务已启动
+2025-02-06 23:21:18,081 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:21:18,081 - INFO - server listening on [::1]:5140
+2025-02-06 23:21:18,081 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:21:20,794 - INFO - connection open
+2025-02-06 23:24:42,667 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:24:42,667 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:24:42,667 - INFO - Scheduler started
+2025-02-06 23:24:42,667 - INFO - 定时任务已启动
+2025-02-06 23:24:42,683 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:24:42,683 - INFO - server listening on [::1]:5140
+2025-02-06 23:24:42,683 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:24:46,050 - INFO - connection open
+2025-02-06 23:25:42,790 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:25:42,790 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:25:42,790 - INFO - Scheduler started
+2025-02-06 23:25:42,790 - INFO - 定时任务已启动
+2025-02-06 23:25:42,806 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:25:42,806 - INFO - server listening on [::1]:5140
+2025-02-06 23:25:42,807 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:25:45,194 - INFO - connection open
+2025-02-06 23:27:03,584 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:27:03,584 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:27:03,584 - INFO - Scheduler started
+2025-02-06 23:27:03,584 - INFO - 定时任务已启动
+2025-02-06 23:27:03,584 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:27:03,584 - INFO - server listening on [::1]:5140
+2025-02-06 23:27:03,584 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:27:05,610 - INFO - connection open
+2025-02-06 23:32:43,841 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:32:43,841 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:32:43,841 - INFO - Scheduler started
+2025-02-06 23:32:43,841 - INFO - 定时任务已启动
+2025-02-06 23:32:43,857 - INFO - server listening on [::1]:5140
+2025-02-06 23:32:43,857 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:32:43,857 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:32:45,995 - INFO - connection open
+2025-02-06 23:43:13,499 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:43:13,501 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:43:13,501 - INFO - Scheduler started
+2025-02-06 23:43:13,501 - INFO - 定时任务已启动
+2025-02-06 23:43:13,513 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:43:13,513 - INFO - server listening on [::1]:5140
+2025-02-06 23:43:13,513 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:43:17,794 - INFO - connection open
+2025-02-06 23:46:41,935 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:46:41,935 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:46:41,935 - INFO - Scheduler started
+2025-02-06 23:46:41,935 - INFO - 定时任务已启动
+2025-02-06 23:46:41,935 - ERROR - Task processing failed: 'coroutine' object is not callable
+2025-02-06 23:47:19,295 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:47:19,295 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:47:19,295 - INFO - Scheduler started
+2025-02-06 23:47:19,295 - INFO - 定时任务已启动
+2025-02-06 23:47:19,302 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:47:19,302 - INFO - server listening on [::1]:5140
+2025-02-06 23:47:19,302 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:47:25,018 - INFO - connection open
+2025-02-06 23:50:16,824 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:50:16,832 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:50:16,833 - INFO - Scheduler started
+2025-02-06 23:50:16,833 - INFO - 定时任务已启动
+2025-02-06 23:50:16,833 - INFO - server listening on [::1]:5140
+2025-02-06 23:50:16,833 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:50:16,833 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:50:20,787 - INFO - connection open
+2025-02-06 23:50:22,503 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-02-06 23:50:22,503 - ERROR - API请求失败: Error code: 401 - {'error': {'message': 'Authentication Fails (no such user)', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-02-06 23:50:22,520 - ERROR - Task processing failed: Error code: 401 - {'error': {'message': 'Authentication Fails (no such user)', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-02-06 23:51:09,764 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-02-06 23:51:09,765 - ERROR - API请求失败: Error code: 401 - {'error': {'message': 'Authentication Fails (no such user)', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-02-06 23:51:09,765 - ERROR - Task processing failed: Error code: 401 - {'error': {'message': 'Authentication Fails (no such user)', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-02-06 23:51:25,472 - INFO - HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-02-06 23:51:25,472 - ERROR - API请求失败: Error code: 401 - {'error': {'message': 'Authentication Fails (no such user)', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-02-06 23:51:25,472 - ERROR - Task processing failed: Error code: 401 - {'error': {'message': 'Authentication Fails (no such user)', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}
+2025-02-06 23:53:02,993 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:53:03,002 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:53:03,003 - INFO - Scheduler started
+2025-02-06 23:53:03,003 - INFO - 定时任务已启动
+2025-02-06 23:53:03,008 - INFO - server listening on [::1]:5140
+2025-02-06 23:53:03,008 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:53:03,008 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:53:06,090 - INFO - connection open
+2025-02-06 23:57:00,676 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:57:00,676 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:57:00,676 - INFO - Scheduler started
+2025-02-06 23:57:00,676 - INFO - 定时任务已启动
+2025-02-06 23:57:00,689 - INFO - server listening on [::1]:5140
+2025-02-06 23:57:00,689 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:57:00,689 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:57:03,298 - INFO - connection open
+2025-02-06 23:57:04,815 - ERROR - API请求失败: no running event loop
+2025-02-06 23:57:04,816 - ERROR - Task processing failed: no running event loop
+2025-02-06 23:58:33,773 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:58:33,774 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:58:33,775 - INFO - Scheduler started
+2025-02-06 23:58:33,775 - INFO - 定时任务已启动
+2025-02-06 23:58:33,779 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:58:33,781 - INFO - server listening on [::1]:5140
+2025-02-06 23:58:33,781 - INFO - WebSocket服务已启动，端口：5140
+2025-02-06 23:58:37,171 - INFO - connection open
+2025-02-06 23:59:45,932 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-02-06 23:59:45,934 - INFO - Added job "Scheduler._clear_temp_file" to job store "default"
+2025-02-06 23:59:45,935 - INFO - Scheduler started
+2025-02-06 23:59:45,935 - INFO - 定时任务已启动
+2025-02-06 23:59:45,940 - INFO - server listening on [::1]:5140
+2025-02-06 23:59:45,941 - INFO - server listening on 127.0.0.1:5140
+2025-02-06 23:59:45,941 - INFO - WebSocket服务已启动，端口：5140

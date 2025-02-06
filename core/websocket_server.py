@@ -41,10 +41,7 @@ class WebSocketServer:
     def _load_config(self):
         """加载配置文件"""
         with open(settings.PathConfig.CONFIG_JSON) as f:
-            temp = json.load(f)
-            settings.DeepSeekConfig.API_KEY = temp['deepseek']['key']
-            settings.DeepSeekConfig.API_URL = temp['deepseek']['url']
-            return temp['websocket']
+            return json.load(f)['websocket']
     
     async def _group_list(self, websocket: websockets.ServerConnection):
         """发送群组消息"""

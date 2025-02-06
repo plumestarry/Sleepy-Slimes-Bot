@@ -2,6 +2,7 @@ import threading
 import queue
 import logging
 import json
+import asyncio
 from openai import OpenAI
 from config.settings import DeepSeekConfig, WebSocketsConfig
 from commands.method.message_sendformat import Message_SendFormat, Parameter_Judgment
@@ -39,7 +40,7 @@ class DeepSeekAPI:
             daemon=True
         )
         self.worker_thread.start()
-
+        
         # 上下文访问锁
         self.messages_lock = threading.Lock()
 
@@ -54,25 +55,18 @@ class DeepSeekAPI:
             finally:
                 self.task_queue.task_done()
 
-    @classmethod
-    def start_new_conversation(cls):
-        """类方法，清空对话上下文"""
-        instance = cls()
-        with instance.messages_lock:
-            DeepSeekConfig.MESSAGES.clear()
-            logging.info("Conversation history cleared")
-
     def async_chat(self, group_text: str, temperature: float, message: Message_SendFormat):
         """
         异步对话接口
         :param group_text: 用户输入的文本消息
         """
-        self.task_queue.put(lambda: self._handle_message(group_text, temperature, message))      
+        self.task_queue.put(lambda: self._handle_message(group_text, temperature, message))    
         # logging.debug(f"Message queued: {group_text}")
 
-    async def _handle_message(self, group_text: str, temperature: float, message: Message_SendFormat):
+    def _handle_message(self, group_text: str, temperature: float, message: Message_SendFormat):
         """实际处理消息的流程"""
         try:
+            print("group_text: ")
             # 添加用户消息到上下文
             with self.messages_lock:
                 DeepSeekConfig.MESSAGES.append({
@@ -92,7 +86,7 @@ class DeepSeekAPI:
 
             # 解析响应内容
             response_content = response.choices[0].message.content
-            await WebSocketsConfig.SOCKET.send(json.dumps(message.normal_message(response_content)))
+            asyncio.run(WebSocketsConfig.SOCKET.send(json.dumps(message.normal_message(response_content))))
             
             # 添加AI回复到上下文
             with self.messages_lock:
@@ -105,6 +99,13 @@ class DeepSeekAPI:
 
         except Exception as e:
             logging.error(f"API请求失败: {str(e)}")
-            await WebSocketsConfig.SOCKET.send(json.dumps(message.normal_message("请求失败，请稍后再试")))
+            asyncio.run(WebSocketsConfig.SOCKET.send(json.dumps(message.normal_message("请求失败，请稍后再试"))))
             raise
 
+    @classmethod
+    def start_new_conversation(cls):
+        """类方法，清空对话上下文"""
+        instance = cls()
+        with instance.messages_lock:
+            DeepSeekConfig.MESSAGES.clear()
+            logging.info("Conversation history cleared")

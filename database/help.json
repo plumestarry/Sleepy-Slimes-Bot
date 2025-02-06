@@ -1,5 +1,5 @@
 {
-    "private_help": "1. 依赖注入：(SQL_create / SQL_add / SQL_get/ SQL_update / SQL_delete):(*.db):(SQL 语句)\n2. 群组添加：(group_add / group_delete / user_add / user_delete) (group_id / user_id)\n3. 高级计划：(SCHEDULE_add / SCHEDULE_delete / SCHEDULE_completed / SCHEDULE_check) (SCHEDULE)",
-    "special_help": "1. p站(1/2/3) tag\n2. 随机二次元\n3. 服务器状态\n4. 隐藏功能",
-    "public_help": "1. p站(1/2/3) tag\n2. 随机二次元"
+    "private_help": "\n1. 依赖注入：(SQL_create / SQL_add / SQL_get/ SQL_update / SQL_delete):(*.db):(SQL 语句)\n2. 群组添加：(group_add / group_delete / user_add / user_delete) (group_id / user_id)\n3. 高级计划：(SCHEDULE_add / SCHEDULE_delete / SCHEDULE_completed / SCHEDULE_check) (SCHEDULE)",
+    "special_help": "\n1. p站(1/2/3) tag\n2. 随机二次元\n3. 服务器状态\n4. 隐藏功能\n4. ds(-/0/1/2/3) content(-新的对话/0代码编写/1数据抽取/2通用对话/3创意对话)",
+    "public_help": "\n1. p站(1/2/3) tag\n2. 随机二次元\n3. ds(-/0/1/2/3) content(-新的对话/0代码编写/1数据抽取/2通用对话/3创意对话)"
 }

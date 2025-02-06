@@ -20,7 +20,8 @@ class Scheduler:
             self._clear_temp_file,
             'cron',
             hour=config['hour'],
-            minute=config['minute']
+            minute=config['minute'],
+            misfire_grace_time=60
         )
         self.scheduler.start()
         logging.info("定时任务已启动")

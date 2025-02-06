@@ -6,6 +6,7 @@ from utils import logger, file_manager
 from core.websocket_server import WebSocketServer
 from core.data_processor import DataProcessor
 from core.scheduler import Scheduler
+from commands.method.deepseek import DeepSeekAPI
 
 async def main():
     """程序主入口"""
@@ -18,11 +19,13 @@ async def main():
     processor = DataProcessor(fm)
     server = WebSocketServer(processor.process)
     scheduler = Scheduler(fm)
+    # deepseek = DeepSeekAPI()
 
     # 启动系统
     await asyncio.gather(
         server.start(),
-        scheduler.start()
+        scheduler.start(),
+        # deepseek.start()
     )
 
     # 保持运行

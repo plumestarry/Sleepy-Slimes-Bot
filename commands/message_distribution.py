@@ -113,19 +113,19 @@ class Distribution(object):
             
             if message_content["type"] == "text":
 
-                if message_content["data"]["text"] == "帮助":
-                    return server_help(message_dict, "public_help")
+                if message_content["data"]["text"][:2] == "ds":
+                    return DeepSeekServer(message_dict, message_content["data"]["text"]).send()
 
                 if len(message_content["data"]["text"]) < 4:
                     return None
                 if len(message_content["data"]["text"]) > 12:
                     return None
+                if message_content["data"]["text"] == "帮助":
+                    return server_help(message_dict, "public_help")
                 if message_content["data"]["text"][:2] == "p站":
                     return key_image(message_dict, message_content["data"]["text"])
                 if message_content["data"]["text"] == "随机二次元":
                     return random_image(message_dict)
-                if message_content["data"]["text"][:2] == "ds":
-                    return DeepSeekServer(message_dict, message_content["data"]["text"].split(" ")).send()
                 if message_content["data"]["text"].strip(" ") == "消息撤回":
                     return server_recall(message_dict)
         

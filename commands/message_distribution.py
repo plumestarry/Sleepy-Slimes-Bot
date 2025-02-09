@@ -92,6 +92,9 @@ class Distribution(object):
                 if message_content["data"]["text"] == "帮助":
                     return server_help(message_dict, "special_help")
                 
+                if message_content["data"]["text"][:2] == "ds":
+                    return DeepSeekServer(message_dict, message_content["data"]["text"]).send()
+                
                 if message_content["data"]["text"].strip(" ") in ["创建牛至", "嗦牛至", "打胶", "透群友", "击剑"]:
                     return KunKun_Game().judge(message_dict, message_content["data"]["text"].strip(" "))
                 
@@ -113,15 +116,12 @@ class Distribution(object):
             
             if message_content["type"] == "text":
 
-                if message_content["data"]["text"][:2] == "ds":
-                    return DeepSeekServer(message_dict, message_content["data"]["text"]).send()
-
+                if message_content["data"]["text"] == "帮助":
+                    return server_help(message_dict, "public_help")
                 if len(message_content["data"]["text"]) < 4:
                     return None
                 if len(message_content["data"]["text"]) > 12:
                     return None
-                if message_content["data"]["text"] == "帮助":
-                    return server_help(message_dict, "public_help")
                 if message_content["data"]["text"][:2] == "p站":
                     return key_image(message_dict, message_content["data"]["text"])
                 if message_content["data"]["text"] == "随机二次元":

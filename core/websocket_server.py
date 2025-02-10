@@ -19,8 +19,9 @@ class WebSocketServer:
         """处理单个WebSocket连接"""
         self.active_connections.add(websocket)
         try:
+            if not settings.WebSocketsConfig.SOCKET:
+                await self._group_list(websocket)
             settings.WebSocketsConfig.SOCKET = websocket
-            await self._group_list(websocket)
             async for message in websocket:
                 asyncio.create_task(self.message_callback(message, websocket, WhiteList.special_manage()))
         except websockets.ConnectionClosed:

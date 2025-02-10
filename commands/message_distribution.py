@@ -6,11 +6,11 @@ from commands.special.server_status import server_data
 from commands.special.server_poke import server_poke
 from commands.special.server_kunkun import KunKun_Game
 from commands.special.server_schedule import Schedule
+from commands.special.server_deepseek import DeepSeekServer
 
 from commands.public.server_help import server_at, server_help
 from commands.public.server_image import random_image, key_image
 from commands.public.server_recall import server_recall
-from commands.public.server_deepseek import DeepSeekServer
 
 
 class Distribution(object):

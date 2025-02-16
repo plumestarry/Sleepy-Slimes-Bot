@@ -3,7 +3,6 @@ from commands.private.server_sql import ServerSQL
 
 from commands.special.server_increase import server_increase
 from commands.special.server_status import server_data
-from commands.special.server_poke import server_poke
 from commands.special.server_kunkun import KunKun_Game
 from commands.special.server_schedule import Schedule
 from commands.special.server_deepseek import DeepSeekServer
@@ -11,6 +10,7 @@ from commands.special.server_deepseek import DeepSeekServer
 from commands.public.server_help import server_at, server_help
 from commands.public.server_image import random_image, key_image
 from commands.public.server_recall import server_recall
+from commands.public.server_poke import server_poke
 
 
 class Distribution(object):
@@ -53,8 +53,10 @@ class Distribution(object):
             if message_send:
                 return message_send
             
-        # if message_dict:
-        #     pass
+        if message_dict:
+            message_send = self.public_notice(message_dict)
+            if message_send:
+                return message_send
         
         return None
 
@@ -138,10 +140,12 @@ class Distribution(object):
         
         if message_dict["notice_type"] == "group_increase":
             return server_increase(message_dict)
-        if "sub_type" in message_dict and message_dict["sub_type"] == "poke":
-            return server_poke(message_dict)
         
         return None
     
     def public_notice(self, message_dict: dict) -> dict:
+        
+        if "sub_type" in message_dict and message_dict["sub_type"] == "poke":
+            return server_poke(message_dict)
+        
         return None
